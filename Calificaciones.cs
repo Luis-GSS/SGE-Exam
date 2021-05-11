@@ -37,8 +37,7 @@ namespace SGE_pa_Excentar
             try
             {
                 StreamReader sr = new StreamReader("SGE.json");
-                lectura = sr.ReadToEnd();
-                //si
+                lectura = sr.ReadToEnd();                
                 sr.Close();
                 json = JObject.Parse(lectura);
                 if (lectura != null)
