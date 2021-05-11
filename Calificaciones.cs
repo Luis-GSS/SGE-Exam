@@ -30,6 +30,8 @@ namespace SGE_pa_Excentar
         private void Calificaciones_Load(object sender, EventArgs e)
         {
             Console.WriteLine("Hola mundo");
+
+            //esto es una prueba
             int i = 0;
             json = new JObject();
             jsonAlumno = new JObject();
