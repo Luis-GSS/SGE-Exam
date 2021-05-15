@@ -200,9 +200,16 @@ namespace SGE_pa_Excentar
 
         }
 
+        private void inglesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamenI nel = new ExamenI("Ingles", nom);
+            nel.Show();
+            
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

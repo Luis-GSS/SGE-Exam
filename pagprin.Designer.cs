@@ -44,6 +44,14 @@ namespace SGE_pa_Excentar
             this.iGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obtenerAyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.examenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tAPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.principiosElecrtricosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metodosNumericosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ecuacionesDifToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simulacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.basesDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.noControl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -60,7 +68,8 @@ namespace SGE_pa_Excentar
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuDeToolStripMenuItem,
             this.acercaDeToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
+            this.ayudaToolStripMenuItem,
+            this.examenesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(452, 24);
@@ -82,28 +91,28 @@ namespace SGE_pa_Excentar
             // calificacionesToolStripMenuItem
             // 
             this.calificacionesToolStripMenuItem.Name = "calificacionesToolStripMenuItem";
-            this.calificacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calificacionesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.calificacionesToolStripMenuItem.Text = "Calificaciones";
             this.calificacionesToolStripMenuItem.Click += new System.EventHandler(this.calificacionesToolStripMenuItem_Click);
             // 
             // reticulaToolStripMenuItem
             // 
             this.reticulaToolStripMenuItem.Name = "reticulaToolStripMenuItem";
-            this.reticulaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reticulaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.reticulaToolStripMenuItem.Text = "Reticula";
             this.reticulaToolStripMenuItem.Click += new System.EventHandler(this.reticulaToolStripMenuItem_Click);
             // 
             // datosPersonalesToolStripMenuItem
             // 
             this.datosPersonalesToolStripMenuItem.Name = "datosPersonalesToolStripMenuItem";
-            this.datosPersonalesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.datosPersonalesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.datosPersonalesToolStripMenuItem.Text = "Datos personales";
             this.datosPersonalesToolStripMenuItem.Click += new System.EventHandler(this.datosPersonalesToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.salirToolStripMenuItem.Text = "Cerrar sesion";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -176,6 +185,63 @@ namespace SGE_pa_Excentar
             this.obtenerAyudaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.obtenerAyudaToolStripMenuItem.Text = "Obtener ayuda";
             this.obtenerAyudaToolStripMenuItem.Click += new System.EventHandler(this.obtenerAyudaToolStripMenuItem_Click);
+            // 
+            // examenesToolStripMenuItem
+            // 
+            this.examenesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tAPToolStripMenuItem,
+            this.inglesToolStripMenuItem,
+            this.principiosElecrtricosToolStripMenuItem,
+            this.metodosNumericosToolStripMenuItem,
+            this.ecuacionesDifToolStripMenuItem,
+            this.simulacionToolStripMenuItem,
+            this.basesDeDatosToolStripMenuItem});
+            this.examenesToolStripMenuItem.Name = "examenesToolStripMenuItem";
+            this.examenesToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.examenesToolStripMenuItem.Text = "Examenes";
+            // 
+            // tAPToolStripMenuItem
+            // 
+            this.tAPToolStripMenuItem.Name = "tAPToolStripMenuItem";
+            this.tAPToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.tAPToolStripMenuItem.Text = "TAP";
+            // 
+            // inglesToolStripMenuItem
+            // 
+            this.inglesToolStripMenuItem.Name = "inglesToolStripMenuItem";
+            this.inglesToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.inglesToolStripMenuItem.Text = "Ingles";
+            this.inglesToolStripMenuItem.Click += new System.EventHandler(this.inglesToolStripMenuItem_Click);
+            // 
+            // principiosElecrtricosToolStripMenuItem
+            // 
+            this.principiosElecrtricosToolStripMenuItem.Name = "principiosElecrtricosToolStripMenuItem";
+            this.principiosElecrtricosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.principiosElecrtricosToolStripMenuItem.Text = "Principios Elecrtricos";
+            // 
+            // metodosNumericosToolStripMenuItem
+            // 
+            this.metodosNumericosToolStripMenuItem.Name = "metodosNumericosToolStripMenuItem";
+            this.metodosNumericosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.metodosNumericosToolStripMenuItem.Text = "Metodos Numericos";
+            // 
+            // ecuacionesDifToolStripMenuItem
+            // 
+            this.ecuacionesDifToolStripMenuItem.Name = "ecuacionesDifToolStripMenuItem";
+            this.ecuacionesDifToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.ecuacionesDifToolStripMenuItem.Text = "Ecuaciones Dif";
+            // 
+            // simulacionToolStripMenuItem
+            // 
+            this.simulacionToolStripMenuItem.Name = "simulacionToolStripMenuItem";
+            this.simulacionToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.simulacionToolStripMenuItem.Text = "Simulacion";
+            // 
+            // basesDeDatosToolStripMenuItem
+            // 
+            this.basesDeDatosToolStripMenuItem.Name = "basesDeDatosToolStripMenuItem";
+            this.basesDeDatosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.basesDeDatosToolStripMenuItem.Text = "Bases de datos";
             // 
             // label1
             // 
@@ -295,5 +361,13 @@ namespace SGE_pa_Excentar
         private System.Windows.Forms.ToolStripMenuItem direccionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem obtenerAyudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem examenesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tAPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inglesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem principiosElecrtricosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem metodosNumericosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ecuacionesDifToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem simulacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem basesDeDatosToolStripMenuItem;
     }
 }
