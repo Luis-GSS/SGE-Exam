@@ -36,7 +36,7 @@ namespace SGE_pa_Excentar
             string contra = "", nom=""; 
             json = new JObject();
             jsonAlumnos = new JObject();
-            //lee archivos
+            //lee 
             try
             {
                 StreamReader sr = new StreamReader("SGE.json");

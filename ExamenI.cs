@@ -14,7 +14,7 @@ namespace SGE_pa_Excentar
 {
     public partial class ExamenI : Form
     {
-
+        
         string control;
         string mta, nom;
         public JArray jArray;
@@ -22,6 +22,7 @@ namespace SGE_pa_Excentar
         public JObject jsonAlumno;
         public JObject json;
         String lectura;
+        //hola
         public ExamenI(string mta, string nom)
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace SGE_pa_Excentar
 
         private void ExamenI_Load(object sender, EventArgs e)
         {
-            
+            //yo
             List  < int > list = new List<int>();
             
             Random r = new Random();
