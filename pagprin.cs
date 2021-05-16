@@ -202,7 +202,7 @@ namespace SGE_pa_Excentar
 
         private void inglesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExamenI nel = new ExamenI("Ingles", nom);
+            ExamenI nel = new ExamenI("Ingles", nom, control);
             nel.Show();
             
         }

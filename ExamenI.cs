@@ -23,11 +23,12 @@ namespace SGE_pa_Excentar
         public JObject json;
         String lectura;
         //hola
-        public ExamenI(string mta, string nom)
+        public ExamenI(string mta, string nom, string control)
         {
             InitializeComponent();
             this.mta = mta;
             this.nom = nom;
+            this.control = control;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -38,6 +39,11 @@ namespace SGE_pa_Excentar
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void ExamenI_Load(object sender, EventArgs e)
@@ -70,6 +76,7 @@ namespace SGE_pa_Excentar
 
             nomE.Text = nomE.Text + mta;
             nomA.Text = nomA.Text + nom;
+            numC.Text = numC.Text + control;
 
             
             json = new JObject();
@@ -97,10 +104,11 @@ namespace SGE_pa_Excentar
 
                                 if (list.Contains((int)jObject.GetValue("ID_TAP")))
                                 {
-                                    
-                                    listBox1.Items.Add((String)jObject.GetValue("Pregunta") + "\n");
-                                   
-                                    
+
+                                    listBox1.Items.Add((String)jObject.GetValue("Pregunta"));
+                                    listBox1.Items.Add("");
+                                    listBox1.Items.Add("");
+
                                     if (j == 0)
                                     {
                                         int vr = r.Next(0, 3);
@@ -122,6 +130,213 @@ namespace SGE_pa_Excentar
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 1)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 2)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 3)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 4)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 5)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 6)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 7)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 8)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                    }
+                                    if (j == 9)
+                                    {
+                                        int vr = r.Next(0, 3);
+                                        Console.WriteLine(vr);
+                                        if (vr == 0)
+                                        {
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                        }
+                                        if (vr == 1)
+                                        {
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                        }
+                                        if (vr == 2)
+                                        {
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                         }
                                     }
                                     j++;
