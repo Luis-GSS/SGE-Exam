@@ -211,6 +211,7 @@ namespace SGE_pa_Excentar
         {
             ExamenI nel = new ExamenI("Principios Electricos", nom, control, "BancodePreguntasdePrincipiosElectricos", "preguntasPE");
             nel.Show();
+
         }
 
         private void label2_Click(object sender, EventArgs e)

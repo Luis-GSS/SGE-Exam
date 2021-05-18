@@ -44,6 +44,8 @@ namespace SGE_pa_Excentar
             this.box9 = new System.Windows.Forms.ComboBox();
             this.box10 = new System.Windows.Forms.ComboBox();
             this.numC = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nomE
@@ -69,6 +71,7 @@ namespace SGE_pa_Excentar
             // 
             // box1
             // 
+            this.box1.BackColor = System.Drawing.SystemColors.Window;
             this.box1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box1.FormattingEnabled = true;
             this.box1.Location = new System.Drawing.Point(32, 120);
@@ -78,11 +81,11 @@ namespace SGE_pa_Excentar
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(900, 0);
+            this.button1.Location = new System.Drawing.Point(888, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
+            this.button1.Text = "Salir";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -183,19 +186,41 @@ namespace SGE_pa_Excentar
             // 
             this.numC.AutoSize = true;
             this.numC.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numC.Location = new System.Drawing.Point(562, 50);
+            this.numC.Location = new System.Drawing.Point(502, 19);
             this.numC.Name = "numC";
             this.numC.Size = new System.Drawing.Size(185, 31);
             this.numC.TabIndex = 21;
             this.numC.Text = "Nº de Control:";
             this.numC.Click += new System.EventHandler(this.label1_Click_1);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(869, 587);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 41);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cal
+            // 
+            this.cal.AutoSize = true;
+            this.cal.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cal.Location = new System.Drawing.Point(502, 50);
+            this.cal.Name = "cal";
+            this.cal.Size = new System.Drawing.Size(165, 31);
+            this.cal.TabIndex = 23;
+            this.cal.Text = "Calificacion:";
+            // 
             // ExamenI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(975, 591);
+            this.ClientSize = new System.Drawing.Size(975, 640);
+            this.Controls.Add(this.cal);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.numC);
             this.Controls.Add(this.box10);
             this.Controls.Add(this.box9);
@@ -237,5 +262,7 @@ namespace SGE_pa_Excentar
         private System.Windows.Forms.ComboBox box9;
         private System.Windows.Forms.ComboBox box10;
         private System.Windows.Forms.Label numC;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label cal;
     }
 }

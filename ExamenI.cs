@@ -14,7 +14,8 @@ namespace SGE_pa_Excentar
 {
     public partial class ExamenI : Form
     {
-        
+        List<String> res = new List<String>();
+        bool flag = true;
         string control;
         string mta, nom, banco, preguntas;
         public JArray jArray;
@@ -35,6 +36,105 @@ namespace SGE_pa_Excentar
 
         private void label1_Click(object sender, EventArgs e)
         {
+            foreach (var item in res)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            
+
+
+            int calif=0;
+            
+            if (box1.SelectedItem.ToString().Equals(res[0])) {
+                box1.BackColor = Color.LightGreen;
+                calif++;
+            } else box1.BackColor = Color.Red;
+
+            if (box2.SelectedItem.ToString().Equals(res[1]))
+            {
+                box2.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box2.BackColor = Color.Red;
+            if (box3.SelectedItem.ToString().Equals(res[2]))
+            {
+                box3.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box3.BackColor = Color.Red;
+            if (box4.SelectedItem.ToString().Equals(res[3]))
+            {
+                box4.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box4.BackColor = Color.Red;
+            if (box5.SelectedItem.ToString().Equals(res[4]))
+            {
+                box5.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box5.BackColor = Color.Red;
+            if (box6.SelectedItem.ToString().Equals(res[5]))
+            {
+                box6.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box6.BackColor = Color.Red;
+
+            if (box7.SelectedItem.ToString().Equals(res[6]))
+            {
+                box7.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box7.BackColor = Color.Red;
+            if (box8.SelectedItem.ToString().Equals(res[7]))
+            {
+                box8.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box8.BackColor = Color.Red;
+            if (box9.SelectedItem.ToString().Equals(res[8]))
+            {
+                box9.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box9.BackColor = Color.Red;
+            if (box10.SelectedItem.ToString().Equals(res[9]))
+            {
+                box10.BackColor = Color.LightGreen;
+                calif++;
+            }
+            else box10.BackColor = Color.Red;
+            calif=calif * 10;
+            if (flag)
+            {
+                int califF = calif;
+                if (calif < 70)
+                {
+                    
+                    cal.BackColor = Color.Red;
+                    MessageBox.Show("Ponte a estudiar joto");
+                    
+                    
+                }
+                else {
+                    cal.BackColor = Color.LightGreen;
+                    MessageBox.Show("Copiaste...");
+
+                }
+                cal.Text = cal.Text + " " + califF;
+                flag = false;
+            }
+
+            
+
+
+
 
         }
 
@@ -45,7 +145,10 @@ namespace SGE_pa_Excentar
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-
+            foreach (var item in res)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         private void ExamenI_Load(object sender, EventArgs e)
@@ -120,18 +223,21 @@ namespace SGE_pa_Excentar
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 1)
@@ -143,18 +249,21 @@ namespace SGE_pa_Excentar
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box2.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 2)
@@ -166,18 +275,21 @@ namespace SGE_pa_Excentar
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box3.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 3)
@@ -189,18 +301,21 @@ namespace SGE_pa_Excentar
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box4.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 4)
@@ -212,18 +327,21 @@ namespace SGE_pa_Excentar
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box5.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 5)
@@ -235,18 +353,21 @@ namespace SGE_pa_Excentar
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box6.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 6)
@@ -258,18 +379,21 @@ namespace SGE_pa_Excentar
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box7.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 7)
@@ -281,18 +405,21 @@ namespace SGE_pa_Excentar
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box8.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 8)
@@ -304,18 +431,21 @@ namespace SGE_pa_Excentar
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box9.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     if (j == 9)
@@ -327,18 +457,21 @@ namespace SGE_pa_Excentar
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 1)
                                         {
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                         if (vr == 2)
                                         {
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box10.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));
+                                            res.Add((String)jObject.GetValue("Respuesta_correcta"));
                                         }
                                     }
                                     j++;
