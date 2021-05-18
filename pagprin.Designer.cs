@@ -218,6 +218,7 @@ namespace SGE_pa_Excentar
             this.principiosElecrtricosToolStripMenuItem.Name = "principiosElecrtricosToolStripMenuItem";
             this.principiosElecrtricosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.principiosElecrtricosToolStripMenuItem.Text = "Principios Elecrtricos";
+            this.principiosElecrtricosToolStripMenuItem.Click += new System.EventHandler(this.principiosElecrtricosToolStripMenuItem_Click);
             // 
             // metodosNumericosToolStripMenuItem
             // 

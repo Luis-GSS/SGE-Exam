@@ -16,19 +16,21 @@ namespace SGE_pa_Excentar
     {
         
         string control;
-        string mta, nom;
+        string mta, nom, banco, preguntas;
         public JArray jArray;
         public JObject jsonAlum;
         public JObject jsonAlumno;
         public JObject json;
         String lectura;
         //hola
-        public ExamenI(string mta, string nom, string control)
+        public ExamenI(string mta, string nom, string control, string banco, string preguntas)
         {
             InitializeComponent();
             this.mta = mta;
             this.nom = nom;
             this.control = control;
+            this.banco = banco;
+            this.preguntas = preguntas;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -90,19 +92,19 @@ namespace SGE_pa_Excentar
                 json = JObject.Parse(lectura);
                 if (lectura != null)
                 {
-                    if (json.ContainsKey("BancodePreguntasdeIngles"))
+                    if (json.ContainsKey(banco))
                     {
-                        jsonAlumno = (JObject)json.GetValue("BancodePreguntasdeIngles");
-                        if (jsonAlumno.ContainsKey("preguntasI"))
+                        jsonAlumno = (JObject)json.GetValue(banco);
+                        if (jsonAlumno.ContainsKey(preguntas))
                         {
 
 
-                            JArray jArray = (JArray)jsonAlumno.GetValue("preguntasI");
+                            JArray jArray = (JArray)jsonAlumno.GetValue(preguntas);
                             int j = 0;
                             foreach (JObject jObject in jArray)
                             {
 
-                                if (list.Contains((int)jObject.GetValue("ID_TAP")))
+                                if (list.Contains((int)jObject.GetValue("ID")))
                                 {
 
                                     listBox1.Items.Add((String)jObject.GetValue("Pregunta"));

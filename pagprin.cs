@@ -202,9 +202,15 @@ namespace SGE_pa_Excentar
 
         private void inglesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExamenI nel = new ExamenI("Ingles", nom, control);
+            ExamenI nel = new ExamenI("Ingles", nom, control, "BancodePreguntasdeIngles", "preguntasI");
             nel.Show();
             
+        }
+
+        private void principiosElecrtricosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamenI nel = new ExamenI("Principios Electricos", nom, control, "BancodePreguntasdePrincipiosElectricos", "preguntasPE");
+            nel.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
