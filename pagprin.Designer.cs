@@ -225,12 +225,14 @@ namespace SGE_pa_Excentar
             this.metodosNumericosToolStripMenuItem.Name = "metodosNumericosToolStripMenuItem";
             this.metodosNumericosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.metodosNumericosToolStripMenuItem.Text = "Metodos Numericos";
+            this.metodosNumericosToolStripMenuItem.Click += new System.EventHandler(this.metodosNumericosToolStripMenuItem_Click);
             // 
             // ecuacionesDifToolStripMenuItem
             // 
             this.ecuacionesDifToolStripMenuItem.Name = "ecuacionesDifToolStripMenuItem";
             this.ecuacionesDifToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.ecuacionesDifToolStripMenuItem.Text = "Ecuaciones Dif";
+            this.ecuacionesDifToolStripMenuItem.Click += new System.EventHandler(this.ecuacionesDifToolStripMenuItem_Click);
             // 
             // simulacionToolStripMenuItem
             // 
@@ -243,6 +245,7 @@ namespace SGE_pa_Excentar
             this.basesDeDatosToolStripMenuItem.Name = "basesDeDatosToolStripMenuItem";
             this.basesDeDatosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.basesDeDatosToolStripMenuItem.Text = "Bases de datos";
+            this.basesDeDatosToolStripMenuItem.Click += new System.EventHandler(this.basesDeDatosToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -259,10 +262,10 @@ namespace SGE_pa_Excentar
             // 
             this.noControl.AutoSize = true;
             this.noControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.noControl.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noControl.Location = new System.Drawing.Point(111, 36);
             this.noControl.Name = "noControl";
-            this.noControl.Size = new System.Drawing.Size(2, 20);
+            this.noControl.Size = new System.Drawing.Size(2, 18);
             this.noControl.TabIndex = 2;
             // 
             // dataGridView1

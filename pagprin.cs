@@ -214,6 +214,24 @@ namespace SGE_pa_Excentar
 
         }
 
+        private void metodosNumericosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamenI nel = new ExamenI("Metodos Numericos", nom, control, "BancodePreguntasMetodosNumericos", "preguntasMN");
+            nel.Show();
+        }
+
+        private void ecuacionesDifToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamenI nel = new ExamenI("Ecuaciones Diferenciales", nom, control, "BancodePrguntasEcuacionesDiferenciales", "preguntasED");
+            nel.Show();
+        }
+
+        private void basesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamenI nel = new ExamenI("Base de Datos", nom, control, "BancodePrguntasBaseDeDatos", "preguntasBD");
+            nel.Show();
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
             
