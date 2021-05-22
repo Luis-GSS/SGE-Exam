@@ -22,6 +22,7 @@ namespace SGE_pa_Excentar
         public JObject jsonAlum;
         public JObject jsonAlumno;
         public JObject json;
+        public JObject jsonCalif;
         String lectura;
         //hola
         public ExamenI(string mta, string nom, string control, string banco, string preguntas)
@@ -49,91 +50,149 @@ namespace SGE_pa_Excentar
 
 
             int calif=0;
-            
-            if (box1.SelectedItem.ToString().Equals(res[0])) {
-                box1.BackColor = Color.LightGreen;
-                calif++;
-            } else box1.BackColor = Color.Red;
+            if (box1.SelectedItem!=null && box2.SelectedItem != null && box3.SelectedItem != null && box4.SelectedItem != null && box5.SelectedItem != null && box6.SelectedItem != null && box7.SelectedItem != null && box8.SelectedItem != null && box9.SelectedItem != null && box10.SelectedItem != null)
+            {
 
-            if (box2.SelectedItem.ToString().Equals(res[1]))
-            {
-                box2.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box2.BackColor = Color.Red;
-            if (box3.SelectedItem.ToString().Equals(res[2]))
-            {
-                box3.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box3.BackColor = Color.Red;
-            if (box4.SelectedItem.ToString().Equals(res[3]))
-            {
-                box4.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box4.BackColor = Color.Red;
-            if (box5.SelectedItem.ToString().Equals(res[4]))
-            {
-                box5.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box5.BackColor = Color.Red;
-            if (box6.SelectedItem.ToString().Equals(res[5]))
-            {
-                box6.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box6.BackColor = Color.Red;
-
-            if (box7.SelectedItem.ToString().Equals(res[6]))
-            {
-                box7.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box7.BackColor = Color.Red;
-            if (box8.SelectedItem.ToString().Equals(res[7]))
-            {
-                box8.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box8.BackColor = Color.Red;
-            if (box9.SelectedItem.ToString().Equals(res[8]))
-            {
-                box9.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box9.BackColor = Color.Red;
-            if (box10.SelectedItem.ToString().Equals(res[9]))
-            {
-                box10.BackColor = Color.LightGreen;
-                calif++;
-            }
-            else box10.BackColor = Color.Red;
-            calif=calif * 10;
-            if (flag)
-            {
-                int califF = calif;
-                if (calif < 70)
+                if (box1.SelectedItem.ToString().Equals(res[0]))
                 {
-                    
-                    cal.BackColor = Color.Red;
-                    MessageBox.Show("Ponte a estudiar joto");
-                    
-                    
+                    box1.BackColor = Color.LightGreen;
+                    calif++;
                 }
-                else {
-                    cal.BackColor = Color.LightGreen;
-                    MessageBox.Show("Copiaste...");
+                else box1.BackColor = Color.Red;
+
+                if (box2.SelectedItem.ToString().Equals(res[1]))
+                {
+                    box2.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box2.BackColor = Color.Red;
+                if (box3.SelectedItem.ToString().Equals(res[2]))
+                {
+                    box3.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box3.BackColor = Color.Red;
+                if (box4.SelectedItem.ToString().Equals(res[3]))
+                {
+                    box4.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box4.BackColor = Color.Red;
+                if (box5.SelectedItem.ToString().Equals(res[4]))
+                {
+                    box5.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box5.BackColor = Color.Red;
+                if (box6.SelectedItem.ToString().Equals(res[5]))
+                {
+                    box6.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box6.BackColor = Color.Red;
+
+                if (box7.SelectedItem.ToString().Equals(res[6]))
+                {
+                    box7.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box7.BackColor = Color.Red;
+                if (box8.SelectedItem.ToString().Equals(res[7]))
+                {
+                    box8.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box8.BackColor = Color.Red;
+                if (box9.SelectedItem.ToString().Equals(res[8]))
+                {
+                    box9.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box9.BackColor = Color.Red;
+                if (box10.SelectedItem.ToString().Equals(res[9]))
+                {
+                    box10.BackColor = Color.LightGreen;
+                    calif++;
+                }
+                else box10.BackColor = Color.Red;
+                calif = calif * 10;
+                if (flag)
+                {
+                    int califF = calif;
+                    if (calif < 70)
+                    {
+
+                        cal.BackColor = Color.Red;
+                        MessageBox.Show("Ponte a estudiar joto");
+
+
+                    }
+                    else
+                    {
+                        cal.BackColor = Color.LightGreen;
+                        MessageBox.Show("Copiaste...");
+
+                    }
+                    cal.Text = cal.Text + " " + califF;
+                    flag = false;
+
+                    try
+                    {
+                        StreamReader sr = new StreamReader("SGE.json");
+                        lectura = sr.ReadToEnd();
+                        sr.Close();
+                        json = JObject.Parse(lectura);
+                        if (lectura != null)
+                        {
+                            if (json.ContainsKey("materiasDelCurso"))
+                            {
+                                jsonAlumno = (JObject)json.GetValue("materiasDelCurso");
+                                if (jsonAlumno.ContainsKey(control))
+                                {
+                                    jsonCalif = (JObject)jsonAlumno.GetValue(control);
+                                    jsonCalif.Remove(mta);
+                                    jsonCalif.Add(mta, califF.ToString());
+
+
+
+
+
+                                    try
+                                    {
+                                        StreamWriter sw = new StreamWriter("SGE.json", false);
+                                        sw.WriteLine(json.ToString());
+                                        sw.Close();
+
+                                        MessageBox.Show("Calificacion enviada con exito xdxd");
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Console.WriteLine("Error al registrar: " + ex);
+                                        MessageBox.Show("No se registro el alumno intentalo de nuevo");
+                                    }
+
+                                }
+                            }
+                        }
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Ocurrio un error al leer el archivo jajja" + ex);
+
+                    }
+
+
+
 
                 }
-                cal.Text = cal.Text + " " + califF;
-                flag = false;
+
+
+
             }
-
-            
-
-
+            else MessageBox.Show("Contesta todas las preguntas mensillo");
 
 
         }
@@ -209,7 +268,7 @@ namespace SGE_pa_Excentar
 
                                 if (list.Contains((int)jObject.GetValue("ID")))
                                 {
-
+                                    
                                     listBox1.Items.Add((String)jObject.GetValue("Pregunta"));
                                     listBox1.Items.Add("");
                                     listBox1.Items.Add("");
@@ -219,7 +278,8 @@ namespace SGE_pa_Excentar
                                         int vr = r.Next(0, 3);
                                         Console.WriteLine(vr);
                                         if (vr == 0)
-                                        {
+                                        {   
+                                            
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_correcta"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta1"));
                                             box1.Items.Add((String)jObject.GetValue("Respuesta_incorrecta2"));

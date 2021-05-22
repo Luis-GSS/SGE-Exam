@@ -44,7 +44,7 @@ namespace SGE_pa_Excentar
             this.box9 = new System.Windows.Forms.ComboBox();
             this.box10 = new System.Windows.Forms.ComboBox();
             this.numC = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Enviar = new System.Windows.Forms.Button();
             this.cal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@ namespace SGE_pa_Excentar
             this.box1.FormattingEnabled = true;
             this.box1.Location = new System.Drawing.Point(32, 120);
             this.box1.Name = "box1";
-            this.box1.Size = new System.Drawing.Size(279, 24);
+            this.box1.Size = new System.Drawing.Size(367, 24);
             this.box1.TabIndex = 9;
             // 
             // button1
@@ -107,7 +107,7 @@ namespace SGE_pa_Excentar
             this.box3.FormattingEnabled = true;
             this.box3.Location = new System.Drawing.Point(32, 218);
             this.box3.Name = "box3";
-            this.box3.Size = new System.Drawing.Size(279, 24);
+            this.box3.Size = new System.Drawing.Size(367, 24);
             this.box3.TabIndex = 12;
             // 
             // box4
@@ -116,7 +116,7 @@ namespace SGE_pa_Excentar
             this.box4.FormattingEnabled = true;
             this.box4.Location = new System.Drawing.Point(32, 264);
             this.box4.Name = "box4";
-            this.box4.Size = new System.Drawing.Size(279, 24);
+            this.box4.Size = new System.Drawing.Size(367, 24);
             this.box4.TabIndex = 13;
             // 
             // box5
@@ -125,7 +125,7 @@ namespace SGE_pa_Excentar
             this.box5.FormattingEnabled = true;
             this.box5.Location = new System.Drawing.Point(32, 312);
             this.box5.Name = "box5";
-            this.box5.Size = new System.Drawing.Size(279, 24);
+            this.box5.Size = new System.Drawing.Size(367, 24);
             this.box5.TabIndex = 14;
             // 
             // box6
@@ -134,7 +134,7 @@ namespace SGE_pa_Excentar
             this.box6.FormattingEnabled = true;
             this.box6.Location = new System.Drawing.Point(32, 361);
             this.box6.Name = "box6";
-            this.box6.Size = new System.Drawing.Size(279, 24);
+            this.box6.Size = new System.Drawing.Size(367, 24);
             this.box6.TabIndex = 15;
             // 
             // box7
@@ -143,7 +143,7 @@ namespace SGE_pa_Excentar
             this.box7.FormattingEnabled = true;
             this.box7.Location = new System.Drawing.Point(32, 409);
             this.box7.Name = "box7";
-            this.box7.Size = new System.Drawing.Size(279, 24);
+            this.box7.Size = new System.Drawing.Size(367, 24);
             this.box7.TabIndex = 16;
             // 
             // box2
@@ -152,7 +152,7 @@ namespace SGE_pa_Excentar
             this.box2.FormattingEnabled = true;
             this.box2.Location = new System.Drawing.Point(32, 168);
             this.box2.Name = "box2";
-            this.box2.Size = new System.Drawing.Size(279, 24);
+            this.box2.Size = new System.Drawing.Size(367, 24);
             this.box2.TabIndex = 17;
             // 
             // box8
@@ -161,7 +161,7 @@ namespace SGE_pa_Excentar
             this.box8.FormattingEnabled = true;
             this.box8.Location = new System.Drawing.Point(32, 457);
             this.box8.Name = "box8";
-            this.box8.Size = new System.Drawing.Size(279, 24);
+            this.box8.Size = new System.Drawing.Size(367, 24);
             this.box8.TabIndex = 18;
             // 
             // box9
@@ -170,7 +170,7 @@ namespace SGE_pa_Excentar
             this.box9.FormattingEnabled = true;
             this.box9.Location = new System.Drawing.Point(32, 502);
             this.box9.Name = "box9";
-            this.box9.Size = new System.Drawing.Size(279, 24);
+            this.box9.Size = new System.Drawing.Size(367, 24);
             this.box9.TabIndex = 19;
             // 
             // box10
@@ -179,7 +179,7 @@ namespace SGE_pa_Excentar
             this.box10.FormattingEnabled = true;
             this.box10.Location = new System.Drawing.Point(32, 549);
             this.box10.Name = "box10";
-            this.box10.Size = new System.Drawing.Size(279, 24);
+            this.box10.Size = new System.Drawing.Size(367, 24);
             this.box10.TabIndex = 20;
             // 
             // numC
@@ -193,15 +193,15 @@ namespace SGE_pa_Excentar
             this.numC.Text = "Nº de Control:";
             this.numC.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // button2
+            // Enviar
             // 
-            this.button2.Location = new System.Drawing.Point(869, 587);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 41);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Enviar.Location = new System.Drawing.Point(869, 587);
+            this.Enviar.Name = "Enviar";
+            this.Enviar.Size = new System.Drawing.Size(94, 41);
+            this.Enviar.TabIndex = 22;
+            this.Enviar.Text = "Enviar Respuestas";
+            this.Enviar.UseVisualStyleBackColor = true;
+            this.Enviar.Click += new System.EventHandler(this.button2_Click);
             // 
             // cal
             // 
@@ -217,10 +217,10 @@ namespace SGE_pa_Excentar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(975, 640);
             this.Controls.Add(this.cal);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Enviar);
             this.Controls.Add(this.numC);
             this.Controls.Add(this.box10);
             this.Controls.Add(this.box9);
@@ -262,7 +262,7 @@ namespace SGE_pa_Excentar
         private System.Windows.Forms.ComboBox box9;
         private System.Windows.Forms.ComboBox box10;
         private System.Windows.Forms.Label numC;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Enviar;
         private System.Windows.Forms.Label cal;
     }
 }

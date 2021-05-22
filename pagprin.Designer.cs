@@ -205,6 +205,7 @@ namespace SGE_pa_Excentar
             this.tAPToolStripMenuItem.Name = "tAPToolStripMenuItem";
             this.tAPToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.tAPToolStripMenuItem.Text = "TAP";
+            this.tAPToolStripMenuItem.Click += new System.EventHandler(this.tAPToolStripMenuItem_Click);
             // 
             // inglesToolStripMenuItem
             // 

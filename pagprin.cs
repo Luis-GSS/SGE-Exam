@@ -216,7 +216,7 @@ namespace SGE_pa_Excentar
 
         private void metodosNumericosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExamenI nel = new ExamenI("Metodos Numericos", nom, control, "BancodePreguntasMetodosNumericos", "preguntasMN");
+            ExamenI nel = new ExamenI("Metodos N", nom, control, "BancodePreguntasMetodosNumericos", "preguntasMN");
             nel.Show();
         }
 
@@ -228,8 +228,13 @@ namespace SGE_pa_Excentar
 
         private void basesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExamenI nel = new ExamenI("Base de Datos", nom, control, "BancodePrguntasBaseDeDatos", "preguntasBD");
+            ExamenI nel = new ExamenI("Bases de Datos", nom, control, "BancodePrguntasBaseDeDatos", "preguntasBD");
             nel.Show();
+        }
+
+        private void tAPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void label2_Click(object sender, EventArgs e)
