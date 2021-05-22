@@ -234,7 +234,14 @@ namespace SGE_pa_Excentar
 
         private void tAPToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ExamenI nel = new ExamenI("TAP", nom, control, "BancodePrguntasTAP", "preguntasTAP");
+            nel.Show();
+        }
 
+        private void simulacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamenI nel = new ExamenI("Simulacion", nom, control, "BancodePrguntasSimulacion", "preguntasS");
+            nel.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)

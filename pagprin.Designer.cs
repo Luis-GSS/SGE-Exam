@@ -240,6 +240,7 @@ namespace SGE_pa_Excentar
             this.simulacionToolStripMenuItem.Name = "simulacionToolStripMenuItem";
             this.simulacionToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.simulacionToolStripMenuItem.Text = "Simulacion";
+            this.simulacionToolStripMenuItem.Click += new System.EventHandler(this.simulacionToolStripMenuItem_Click);
             // 
             // basesDeDatosToolStripMenuItem
             // 

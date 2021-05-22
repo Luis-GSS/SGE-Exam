@@ -58,63 +58,110 @@ namespace SGE_pa_Excentar
                     box1.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box1.BackColor = Color.Red;
+                else
+                {
+                    box1.BackColor = Color.Red;
+                    label1.Text = label1.Text + "Respuesta Correcta: " + res[0];
+                }
 
                 if (box2.SelectedItem.ToString().Equals(res[1]))
                 {
                     box2.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box2.BackColor = Color.Red;
+                else
+                {
+                    box2.BackColor = Color.Red;
+                    label2.Text = label2.Text + "Respuesta Correcta: " + res[1];
+                }
+
                 if (box3.SelectedItem.ToString().Equals(res[2]))
                 {
                     box3.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box3.BackColor = Color.Red;
+                else
+                {
+                    box3.BackColor = Color.Red;
+                    label3.Text = label3.Text + "Respuesta Correcta: " + res[2];
+                }
+
                 if (box4.SelectedItem.ToString().Equals(res[3]))
                 {
                     box4.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box4.BackColor = Color.Red;
+                else { 
+                    box4.BackColor = Color.Red;
+                    label4.Text = label4.Text + "Respuesta Correcta: " + res[3];
+                }
+
                 if (box5.SelectedItem.ToString().Equals(res[4]))
                 {
                     box5.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box5.BackColor = Color.Red;
+                else
+                {
+                    box5.BackColor = Color.Red;
+                    label5.Text = label5.Text + "Respuesta Correcta: " + res[4];
+                }
+
                 if (box6.SelectedItem.ToString().Equals(res[5]))
                 {
                     box6.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box6.BackColor = Color.Red;
+                else
+                {
+                    box6.BackColor = Color.Red;
+                    label6.Text = label6.Text + "Respuesta Correcta: " + res[5];
+                }
 
                 if (box7.SelectedItem.ToString().Equals(res[6]))
                 {
                     box7.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box7.BackColor = Color.Red;
+                else
+                {
+                    box7.BackColor = Color.Red;
+                    label7.Text = label7.Text + "Respuesta Correcta: " + res[6];
+                }
+
                 if (box8.SelectedItem.ToString().Equals(res[7]))
                 {
                     box8.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box8.BackColor = Color.Red;
+                else
+                {
+                    box8.BackColor = Color.Red;
+                    label8.Text = label8.Text + "Respuesta Correcta: " + res[7];
+                }
+
                 if (box9.SelectedItem.ToString().Equals(res[8]))
                 {
                     box9.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box9.BackColor = Color.Red;
+                else
+                {
+                    box9.BackColor = Color.Red;
+                    label9.Text = label9.Text + "Respuesta Correcta: " + res[8];
+                }
+
                 if (box10.SelectedItem.ToString().Equals(res[9]))
                 {
                     box10.BackColor = Color.LightGreen;
                     calif++;
                 }
-                else box10.BackColor = Color.Red;
+                else
+                {
+                    box10.BackColor = Color.Red;
+                    label10.Text = label10.Text + "Respuesta Correcta: " + res[9];
+                }
+
                 calif = calif * 10;
                 if (flag)
                 {
@@ -194,6 +241,51 @@ namespace SGE_pa_Excentar
             }
             else MessageBox.Show("Contesta todas las preguntas mensillo");
 
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
 
         }
 
